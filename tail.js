@@ -9,7 +9,7 @@ const assertEqual = function(actual, expected) {
     prettyexpected = '"' + expected + '"';
   }
   if (typeof actual === 'object' || expected === 'object') {
-    for (let i = 0; i < Math.min(actual.length, expected.length); i++) {
+    for (let i = 0; i < Math.max(actual.length, expected.length); i++) {
       if (actual[i] !== expected[i]) {
         bool = false;
       }
