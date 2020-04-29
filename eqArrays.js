@@ -15,18 +15,17 @@ const assertEqual = function(actual, expected) {
     console.log(String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + `Assertion Passed: ${prettyactual} !== ${prettyexpected}`);
   }
 };
-const eqArrays = function(actual,expected){
-  let bool = true;
-    for (let i = 0; i < Math.max(actual.length, expected.length); i++) {
-      if (actual[i] !== expected[i]) {
-        bool = false;
-      }
-    }
-    if (bool) {;
-      return true;
-    } else {
+const eqArrays = function(actual, expected) {
+  if (actual.length !== expected.length) {
+    return false;
+  }
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i]) {
       return false;
     }
+  }
+  return true;
+  
 }
 
 // TEST CODE
@@ -39,3 +38,7 @@ console.log(eqArrays([1, 2, 3], [3, 2, 1]) )// => false
 
 console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"]) )// => true
 console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
+
+console.log(eqArrays([1, 2], [1, 2, 3]) )
+console.log(eqArrays([1, 2, 3], [1, 2]) )
+console.log(eqArrays([1, 2, undefined], [1, 2]) )
