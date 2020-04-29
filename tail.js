@@ -19,7 +19,7 @@ const assertEqual = function(actual, expected) {
       console.log(String.fromCodePoint(0x2705) + String.fromCodePoint(0x2705) + String.fromCodePoint(0x2705) + `Assertion Passed: ${actual} === ${expected}`);
       return;
     } else {
-      console.log(String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + `Assertion Passed: ${actual} !== ${expected}`);
+      console.log(String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + `Assertion Failed: ${actual} !== ${expected}`);
       return;
     }
   }
@@ -27,7 +27,7 @@ const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(String.fromCodePoint(0x2705) + String.fromCodePoint(0x2705) + String.fromCodePoint(0x2705) + `Assertion Passed: ${prettyactual} === ${prettyexpected}`);
   } else {
-    console.log(String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + `Assertion Passed: ${prettyactual} !== ${prettyexpected}`);
+    console.log(String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + `Assertion Failed: ${prettyactual} !== ${prettyexpected}`);
   }
 };
 const tail = function(arr) {

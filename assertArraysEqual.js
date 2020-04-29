@@ -18,6 +18,6 @@ const assertArraysEquals = function(actual, expected){
   if (eqArrays(actual, expected)) {
     console.log(tick + tick + tick + `Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log(cross + cross + cross + `Assertion Passed: ${actual} !== ${expected}`);
+    console.log(cross + cross + cross + `Assertion Failed: ${actual} !== ${expected}`);
   }
 }
