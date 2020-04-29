@@ -11,7 +11,7 @@ const eqArrays = function(actual,expected){
   return true;
   
 }
-const assertArraysEquals = function(actual, expected){
+const assertArraysEqual = function(actual, expected){
   const tick = String.fromCodePoint(0x2705);
   const cross = String.fromCodePoint(0x1f6d1);
 
