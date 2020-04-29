@@ -16,7 +16,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 const countLetters = function(str){
-  noSpace = str.split(' ').join('');
+  let noSpace = str.split(' ').join('');
   let res = {};
   for (const i of noSpace){
     if (res.hasOwnProperty(i.toLowerCase())){
