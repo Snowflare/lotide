@@ -22,22 +22,7 @@ const assertArraysEqual = function(actual, expected){
   }
 }
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  let prettyactual = actual;
-  let prettyexpected = expected;
-  if (typeof actual === 'string') {
-    prettyactual = '"' + actual + '"';
-  }
-  if (typeof expected === 'string') {
-    prettyexpected = '"' + expected + '"';
-  }
 
-  if (actual === expected) {
-    console.log(String.fromCodePoint(0x2705) + String.fromCodePoint(0x2705) + String.fromCodePoint(0x2705) + `Assertion Passed: ${prettyactual} === ${prettyexpected}`);
-  } else {
-    console.log(String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + String.fromCodePoint(0x1f6d1) + `Assertion Failed: ${prettyactual} !== ${prettyexpected}`);
-  }
-};
 const middle = function(array) {
   if (array.length === 1 || array.length === 2 || array === []){
     return [];
@@ -48,10 +33,4 @@ const middle = function(array) {
   }
 }
 
-assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle([1, 2, 3, 3]), [2, 3]);
-assertArraysEqual(middle([]), []);
-assertArraysEqual(middle([1, 2]), []);
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7]), [4]);
+module.exports = middle;
