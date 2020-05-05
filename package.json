@@ -1,0 +1,16 @@
+{
+  "name": "@snowflare/lotide",
+  "version": "1.0.0",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library.",
+  "main": "",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "Daniel Zhang",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2"
+  }
+}
